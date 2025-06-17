@@ -60,7 +60,7 @@
         x-transition:leave="transition ease-in-out duration-300 transform"
         x-transition:leave-start="translate-x-0"
         x-transition:leave-end="-translate-x-full"
-        class="fixed inset-y-0 left-0 w-full sm:w-[500px] bg-[#FFFFFF] z-[110] lg:hidden p-[15px]"
+        class="max-h-screen fixed inset-y-0 left-0 w-full sm:w-[500px] bg-[#FFFFFF] z-[110] lg:hidden p-[15px]"
         @click.away="mobileMenuOpen = false">
 
         <div class="flex flex-col justify-between h-full">

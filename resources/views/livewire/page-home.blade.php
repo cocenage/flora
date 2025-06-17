@@ -68,7 +68,7 @@
 
     <div class="relative">
         <!-- Контейнер для скролла -->
-        <div class="flex overflow-x-auto space-x-[10px] lg:space-x-0 px-[10px] snap-x snap-mandatory whitespace-nowrap py-4 -mx-[10px] lg:overflow-x-visible lg:grid lg:grid-cols-3 lg:gap-[10px] lg:whitespace-normal lg:py-0 lg:mx-0">
+        <div class="flex overflow-x-auto space-x-[10px] lg:space-x-0 px-[10px] snap-x snap-mandatory whitespace-nowrap py-4  lg:overflow-x-visible lg:grid lg:grid-cols-3 lg:gap-[10px] lg:whitespace-normal lg:py-0 lg:mx-0">
             <!-- Блок 1 -->
             <div class="w-[80vw] flex-shrink-0 snap-start lg:w-auto lg:col-span-1">
                 <a href="#" class="relative block overflow-hidden group whitespace-normal">
@@ -76,7 +76,7 @@
                         src="{{ asset('images/base0.webp') }}"
                         alt="img"
                         class=" bg-black shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
-                    <span class="absolute inset-0 flex items-center justify-center text-[40px] text-white">
+                    <span class="absolute inset-0 flex items-center justify-center text-[30px] lg:text-[40px] text-white">
                         О нас
                     </span>
                 </a>
@@ -89,7 +89,7 @@
                         src="{{ asset('images/base.webp') }}"
                         alt="img"
                         class="bg-black shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
-                    <span class="absolute inset-0 flex items-center justify-center text-[40px] text-white">
+                    <span class="absolute inset-0 flex items-center justify-center text-[30px] lg:text-[40px] text-white">
                         Новости
                     </span>
                 </a>
@@ -102,7 +102,7 @@
                         src="{{ asset('images/base2.webp') }}"
                         alt="img"
                         class="bg-black shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
-                    <span class="absolute inset-0 flex items-center justify-center text-[40px] text-white">
+                    <span class="absolute inset-0 flex items-center justify-center text-[30px] lg:text-[40px] text-white">
                         Текст
                     </span>
                 </a>
@@ -121,137 +121,137 @@
         <!-- Основные элементы -->
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/5.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/5.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/6.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/6.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/7.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/7.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/8.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/8.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/9.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/9.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
 
         <!-- Дубликаты для бесконечного эффекта -->
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <!-- Остальные дубликаты... -->
                  <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/5.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/5.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/6.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/6.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/7.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/7.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/8.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/8.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/9.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/9.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
 
         <!-- Дубликаты для бесконечного эффекта -->
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
         <div class="inline-block mx-4">
             <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[100%]">
+                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
             </div>
         </div>
     </div>
@@ -259,36 +259,36 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-[10px] bg-black">
         <a href="">
         <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
-            <h2 class="text-[40px] mb-[40px]">Цветы-антистресс: какие растения дарят для уюта</h2>
+            <h2 class="text-[30px] lg:text-[40px] mb-[20px] lg:mb-[40px]">Цветы-антистресс: какие растения дарят для уюта</h2>
             <p class="text-[20px]">Подборка ароматных и неприхотливых вариантов — для атмосферы комфорта</p>
             <img src="{{ asset('images/21.webp') }}" alt="img" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
         </div>
         </a>
            <a href="">
         <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
-            <h2 class="text-[40px] mb-[40px]">Идеальный букет за 5 минут: как выбрать без стресса</h2>
+            <h2 class="text-[30px] lg:text-[40px] mb-[20px] lg:mb-[40px]">Идеальный букет за 5 минут: как выбрать без стресса</h2>
             <p class="text-[20px]">Гид по сочетаниям цветов и поводам — чтобы ваш подарок запомнился</p>
             <img src="{{ asset('images/22.webp') }}" alt="img" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
         </div>
         </a>    <a href="">
         <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
-            <h2 class="text-[40px] mb-[40px]">7 секретов свежести: как продлить жизнь букету</h2>
+            <h2 class="text-[40px] mb-[20px] lg:mb-[40px]">7 секретов свежести: как продлить жизнь букету</h2>
             <p class="text-[20px]">Простые лайфхаки от флористов — чтобы цветы радовали дольше обычного</p>
             <img src="{{ asset('images/23.webp') }}" alt="img" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
         </div>
         </a>
     </div>
     <div class="bg-[#E69F60]">
-        <div class="py-[25px] px-[50px] lg:py-[50px] lg:px-[250px]">
-            <div   data-aos="fade-up"
-    data-aos-delay="100"  class="grid grid-cols-1 xl:grid-cols-3">
+        <div class="py-[40px] px-[40px] lg:py-[50px] lg:px-[250px]">
+            <div
+    class="grid grid-cols-1 xl:grid-cols-3">
                 <div class="col-span-2">
-                    <h2 class="text-[40px]">Как заказать цветы за 3 минуты</h2>
+                    <h2 class="text-[30px] lg:text-[40px]">Как заказать цветы за 3 минуты</h2>
                     <p class="16px">Быстро, свежо и с персональной заботой</p>
                 </div>
             </div>
-            <div   data-aos="fade-up"
-    data-aos-delay="100"  class="grid grid-cols-1 xl:grid-cols-3 gap-[15px] flex-col items-center justify-center pt-[24px]">
+            <div
+    class="grid grid-cols-1 xl:grid-cols-3 gap-[15px] flex-col items-center justify-center pt-[24px]">
                 <div class="col-span-1">
                     <h2 class="text-[40px] pb-[10px] font-medium">1</h2>
                     <p class="text-[20px] pb-[20px] font-medium">Позвоните нам</p>
@@ -309,8 +309,8 @@
     </div>
     <div
       class="bg-[#F5F3EB]">
-        <div  data-aos="fade-up"
-    data-aos-delay="100" class="py-[25px] px-[50px] lg:py-[50px] lg:px-[250px]">
+        <div
+     class="py-[40px] px-[40px] lg:py-[50px] lg:px-[250px]">
             <p class="text-[32px] mb-[40px]">Вопросы и ответы</p>
             <div class="w-full mx-auto">
                 <div x-data="{ selected: null }">

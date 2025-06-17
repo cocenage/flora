@@ -16,6 +16,7 @@
 
 html, body {
   background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -45,6 +46,16 @@ body {
     display: inline-flex;
     min-width: 200%; /* Увеличиваем ширину для плавности */
 }
+  @media (max-width: 1024px) {
+    .animate-infinite-scroll {
+      min-width: 600%;
+    }
+  }
+    @media (max-width: 620px) {
+    .animate-infinite-scroll {
+      min-width: 1000%;
+    }
+  }
 
 .group:hover .animate-infinite-scroll {
     animation-play-state: paused;

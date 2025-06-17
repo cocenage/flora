@@ -1,7 +1,7 @@
-<div class="max-w-md mx-auto p-8 bg-white rounded-2xl shadow-lg">
+<div class="mx-auto p-8 bg-white text-black rounded-2xl shadow-lg">
     <div class="text-center mb-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-2">Let's be the change</h2>
-        <p class="text-gray-600">Join our newsletter</p>
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">Заказать букет</h2>
+
     </div>
 
     @if(session()->has('message'))
@@ -10,7 +10,7 @@
         </div>
     @endif
 
-    <form wire:submit.prevent="submit" class="space-y-6">
+    <form wire:submit.prevent="submit" class="space-y-6 text-black">
         <!-- Поле телефона -->
         <div x-data>
             <input
@@ -28,7 +28,7 @@
             <input
                 wire:model="email"
                 type="email"
-                placeholder="Email address"
+                placeholder="Ваша почта"
                 class="w-full px-5 py-3 border-0 rounded-lg bg-gray-100 focus:bg-white focus:ring-2 focus:ring-blue-400 transition-all duration-200 placeholder-gray-400"
             >
             @error('email') <p class="mt-1 text-sm text-red-500">{{ $message }}</p> @enderror
@@ -38,7 +38,7 @@
         <div>
             <textarea
                 wire:model="message"
-                placeholder="Your message"
+                placeholder="Ваше сообщение"
                 rows="4"
                 class="w-full px-5 py-3 border-0 rounded-lg bg-gray-100 focus:bg-white focus:ring-2 focus:ring-blue-400 transition-all duration-200 placeholder-gray-400"
             ></textarea>
@@ -56,7 +56,7 @@
             type="submit"
             class="w-full py-3 px-6 bg-black text-white font-medium rounded-lg hover:bg-gray-800 transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2"
         >
-            Subscribe
+            Заказать
         </button>
     </form>
 </div>

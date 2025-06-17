@@ -73,8 +73,8 @@
         <div class="mt-16 pt-6">
             <div class=""></div>
             <div class="flex flex-row items-center justify-between">
-                <div class="text-xs text-gray-100">
-                    © 2025, Flora. Все права защищены.
+                <div class="text-xs text-gray-100 flex gap-[5px]">
+                    © 2025, Flora. <span class="hidden sm:block">Все права защищены.</span>
                 </div>
                 <div class="flex  md:mb-0">
 
