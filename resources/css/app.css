@@ -35,13 +35,31 @@ body {
   }
 
 
-@keyframes lineOut {
-    0% { transform: scaleX(0); transform-origin: left; }
-    50% { transform: scaleX(1); transform-origin: left; }
-    51% { transform-origin: right; }
-    100% { transform: scaleX(0); transform-origin: right; }
+@keyframes infinite-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
-.hover\:animate-line-out:hover {
-    animation: lineOut 1s ease-out forwards;
+.animate-infinite-scroll {
+    animation: infinite-scroll 30s linear infinite;
+    display: inline-flex;
+    min-width: 200%; /* Увеличиваем ширину для плавности */
+}
+
+.group:hover .animate-infinite-scroll {
+    animation-play-state: paused;
+}
+
+
+
+.shrink-animation {
+    --start-scale: 1.15;
+    --end-scale: 1;
+    animation: shrink 1s ease-out forwards;
+    transform-origin: center;
+}
+
+@keyframes shrink {
+    from { transform: scale(var(--start-scale)); }
+    to { transform: scale(var(--end-scale)); }
 }

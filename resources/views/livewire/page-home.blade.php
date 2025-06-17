@@ -6,18 +6,20 @@
 @endpush
 
 <section>
-    <div class="py-[50px] flex flex-col items-center justify-center">
+    <div class="py-[30px] lg:py-[50px] flex flex-col items-center justify-center">
 
-        <h1 class="text-[50px] mt-[32px] underline decoration-3 underline-offset-8">Flora – язык ваших чувств.</h1>
-
-
-
-        <p class="18px mt-[12px] text-center max-w-[600px]">Flora – свежие эмоции в каждом букете. Идеальные цветы для любого повода с быстрой доставкой по Волгограду. Дарите радость просто!</p>
+        <h1 class="text-[30px] lg:text-[50px] mt-[16px] underline decoration-1 lg:decoration-3 underline-offset-8">Flora – язык ваших чувств!</h1>
 
 
 
-        <a href="#" class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#70B7F9] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
-            <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-[#70B7F9]">Заказать!</span>
+        <p       data-aos="fade-up"
+    data-aos-delay="200"  class="18px mt-[12px] text-center max-w-[600px]">Flora – свежие эмоции в каждом букете. Идеальные цветы для любого повода с быстрой доставкой по Волгограду. Дарите радость просто!</p>
+
+
+
+        <a   data-aos="fade-up"
+    data-aos-delay="200"  href="#" class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#70B7F9] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
+            <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-[#70B7F9]">Создать букет</span>
 
             <!-- Анимированный фон -->
             <span class="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group-hover:blur-[1px]"></span>
@@ -71,11 +73,11 @@
             <div class="w-[80vw] flex-shrink-0 snap-start lg:w-auto lg:col-span-1">
                 <a href="#" class="relative block overflow-hidden group whitespace-normal">
                     <img
-                        src="{{ asset('images/base.webp') }}"
+                        src="{{ asset('images/base0.webp') }}"
                         alt="img"
-                        class="w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
+                        class=" bg-black shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
                     <span class="absolute inset-0 flex items-center justify-center text-[40px] text-white">
-                        Текст
+                        О нас
                     </span>
                 </a>
             </div>
@@ -86,9 +88,9 @@
                     <img
                         src="{{ asset('images/base.webp') }}"
                         alt="img"
-                        class="w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
+                        class="bg-black shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
                     <span class="absolute inset-0 flex items-center justify-center text-[40px] text-white">
-                        Текст
+                        Новости
                     </span>
                 </a>
             </div>
@@ -97,9 +99,9 @@
             <div class="w-[80vw] flex-shrink-0 snap-start lg:w-auto lg:col-span-1">
                 <a href="#" class="relative block overflow-hidden group whitespace-normal">
                     <img
-                        src="{{ asset('images/base.webp') }}"
+                        src="{{ asset('images/base2.webp') }}"
                         alt="img"
-                        class="w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
+                        class="bg-black shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
                     <span class="absolute inset-0 flex items-center justify-center text-[40px] text-white">
                         Текст
                     </span>
@@ -113,89 +115,202 @@
 
 
 
-    <div class="relative w-full h-[120px] overflow-hidden flex items-center justify-center">
-        <!-- Бегущая строка (контейнер) -->
-        <div class="flex animate-infinite-scroll whitespace-nowrap group">
-            <!-- Элементы (теперь с блоковой оберткой для scale) -->
-            <div class="inline-block mx-4">
-                <div class="inline-block transition-all duration-300 transform group-hover:pause-animate hover:scale-105 cursor-auto">
-                    <span class="text-[20px] cursor-default">Цветы на Волге</span>
-                </div>
+<div class="relative w-full h-[100px] overflow-hidden flex items-center justify-center">
+    <!-- Бегущая строка (основной контейнер) -->
+    <div class="flex animate-infinite-scroll whitespace-nowrap group">
+        <!-- Основные элементы -->
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[100%]">
             </div>
-            <div class="inline-block mx-4">
-                <div class="inline-block transition-all duration-300 transform group-hover:pause-animate hover:scale-105 	cursor: default">
-                    <span class="text-[20px] cursor-default">Волгоградский букет</span>
-                </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[100%]">
             </div>
-            <div class="inline-block mx-4">
-                <div class="inline-block transition-all duration-300 transform group-hover:pause-animate hover:scale-105 	cursor: default">
-                    <span class="text-[20px] cursor-default">Лепестки</span>
-                </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[100%]">
             </div>
-            <div class="inline-block mx-4">
-                <div class="inline-block transition-all duration-300 transform group-hover:pause-animate hover:scale-105 	cursor: default">
-                    <span class="text-[20px] cursor-default">Цветущий город</span>
-                </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[100%]">
             </div>
-            <div class="inline-block mx-4">
-                <div class="inline-block transition-all duration-300 transform group-hover:pause-animate hover:scale-105 	cursor: default">
-                    <span class="text-[20px] cursor-default">Королевский букет</span>
-                </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/5.webp') }}" alt="партнер" class="w-[100%]">
             </div>
-            <div class="inline-block mx-4">
-                <div class="inline-block transition-all duration-300 transform group-hover:pause-animate hover:scale-105 	cursor: default">
-                    <span class="text-[20px] cursor-default">Сто лепестков</span>
-                </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/6.webp') }}" alt="партнер" class="w-[100%]">
             </div>
-            <!-- Остальные элементы... -->
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/7.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/8.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/9.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+
+        <!-- Дубликаты для бесконечного эффекта -->
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <!-- Остальные дубликаты... -->
+                 <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/5.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/6.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/7.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/8.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/9.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+
+        <!-- Дубликаты для бесконечного эффекта -->
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
+        </div>
+        <div class="inline-block mx-4">
+            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
+                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[100%]">
+            </div>
         </div>
     </div>
+</div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-[10px] bg-black">
+        <a href="">
         <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
-            <h2 class="text-[40px] mb-[40px]">Ntrcn</h2>
-            <p class="text-[20px]">dsfsfdfsdsfd</p>
-            <img src="{{ asset('images/base.webp') }}" alt="img" class="w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
+            <h2 class="text-[40px] mb-[40px]">Цветы-антистресс: какие растения дарят для уюта</h2>
+            <p class="text-[20px]">Подборка ароматных и неприхотливых вариантов — для атмосферы комфорта</p>
+            <img src="{{ asset('images/21.webp') }}" alt="img" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
         </div>
+        </a>
+           <a href="">
         <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
-            <h2 class="text-[40px] mb-[40px]">Ntrcn</h2>
-            <p class="text-[20px]">dsfsfdfsdsfd</p>
-            <img src="{{ asset('images/base.webp') }}" alt="img" class="w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
+            <h2 class="text-[40px] mb-[40px]">Идеальный букет за 5 минут: как выбрать без стресса</h2>
+            <p class="text-[20px]">Гид по сочетаниям цветов и поводам — чтобы ваш подарок запомнился</p>
+            <img src="{{ asset('images/22.webp') }}" alt="img" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
         </div>
+        </a>    <a href="">
         <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
-            <h2 class="text-[40px] mb-[40px]">Ntrcn</h2>
-            <p class="text-[20px]">dsfsfdfsdsfd</p>
-            <img src="{{ asset('images/base.webp') }}" alt="img" class="w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
+            <h2 class="text-[40px] mb-[40px]">7 секретов свежести: как продлить жизнь букету</h2>
+            <p class="text-[20px]">Простые лайфхаки от флористов — чтобы цветы радовали дольше обычного</p>
+            <img src="{{ asset('images/23.webp') }}" alt="img" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
         </div>
+        </a>
     </div>
     <div class="bg-[#E69F60]">
         <div class="py-[25px] px-[50px] lg:py-[50px] lg:px-[250px]">
-            <div class="grid grid-cols-1 xl:grid-cols-3">
-                <div class="col-span-1">
-                    <h2 class="text-[40px]">Привет, бесконечная полка — пока, инвентарь</h2>
-                    <p class="16px">Как работает dropship для розничных продавцов</p>
+            <div   data-aos="fade-up"
+    data-aos-delay="100"  class="grid grid-cols-1 xl:grid-cols-3">
+                <div class="col-span-2">
+                    <h2 class="text-[40px]">Как заказать цветы за 3 минуты</h2>
+                    <p class="16px">Быстро, свежо и с персональной заботой</p>
                 </div>
             </div>
-            <div class="grid grid-cols-1 xl:grid-cols-3 gap-[15px] flex-col items-center justify-center pt-[24px]">
+            <div   data-aos="fade-up"
+    data-aos-delay="100"  class="grid grid-cols-1 xl:grid-cols-3 gap-[15px] flex-col items-center justify-center pt-[24px]">
                 <div class="col-span-1">
                     <h2 class="text-[40px] pb-[10px] font-medium">1</h2>
-                    <p class="text-[20px] pb-[20px] font-medium">Подпишитесь на PBP Dropship</p>
-                    <p class="text-[16px]">Зарегистрируйтесь в программе PBP Dropship и легко интегрируйтесь с такими платформами, как Shopify, Mirakl, CommerceHub и другими.</p>
+                    <p class="text-[20px] pb-[20px] font-medium">Позвоните нам</p>
+                    <p class="text-[16px] lg:w-[75%]">Наши флористы помогут выбрать идеальный букет и уточнят детали.</p>
                 </div>
                 <div class="col-span-1">
-                    <h2 class="text-[40px] pb-[10px] font-medium">1</h2>
-                    <p class="text-[20px] pb-[20px] font-medium">Подпишитесь на PBP Dropship</p>
-                    <p class="text-[16px]">Зарегистрируйтесь в программе PBP Dropship и легко интегрируйтесь с такими платформами, как Shopify, Mirakl, CommerceHub и другими.</p>
+                    <h2 class="text-[40px] pb-[10px] font-medium">2</h2>
+                    <p class="text-[20px] pb-[20px] font-medium">Оформите заказ</p>
+                    <p class="text-[16px] lg:w-[75%]">Все нюансы учтём сразу – вам останется только ждать восторга получателя!</p>
                 </div>
                 <div class="col-span-1">
-                    <h2 class="text-[40px] pb-[10px] font-medium">1</h2>
-                    <p class="text-[20px] pb-[20px] font-medium">Подпишитесь на PBP Dropship</p>
-                    <p class="text-[16px]">Зарегистрируйтесь в программе PBP Dropship и легко интегрируйтесь с такими платформами, как Shopify, Mirakl, CommerceHub и другими.</p>
+                    <h2 class="text-[40px] pb-[10px] font-medium">3</h2>
+                    <p class="text-[20px] pb-[20px] font-medium">Получите сюрприз</p>
+                    <p class="text-[16px] lg:w-[75%]">Доставим свежие цветы точно в срок — с открыткой и вниманием к деталям!</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bg-[#F5F3EB]">
-        <div class="py-[25px] px-[50px] lg:py-[50px] lg:px-[250px]">
+    <div
+      class="bg-[#F5F3EB]">
+        <div  data-aos="fade-up"
+    data-aos-delay="100" class="py-[25px] px-[50px] lg:py-[50px] lg:px-[250px]">
             <p class="text-[32px] mb-[40px]">Вопросы и ответы</p>
             <div class="w-full mx-auto">
                 <div x-data="{ selected: null }">
@@ -386,8 +501,8 @@
                 </div>
             </div>
             <div class="flex w-full items-center justify-center mx-auto">
-                <a href="#" class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#70B7F9] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
-                    <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-[#70B7F9]">Заказать!</span>
+                <a href="#" class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-none border-1 text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
+                    <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-white">Создать букет</span>
 
                     <!-- Анимированный фон -->
                     <span class="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group-hover:blur-[1px]"></span>

@@ -19,9 +19,18 @@
 </head>
 
 <body>
+    <div x-data="{ showPreloader: true }"
+     x-init="setTimeout(() => showPreloader = false, 500)"
+     x-show="showPreloader"
+     x-transition:leave="transition ease-out duration-500"
+     x-transition:leave-start="opacity-100"
+     x-transition:leave-end="opacity-0"
+     class="fixed inset-0 bg-black z-[9999] flex items-center justify-center">
+</div>
     <livewire:partials.header />
     {{ $slot }}
     <livewire:partials.footer />
+<script src="https://www.google.com/recaptcha/api.js?onload=initRecaptcha&render=explicit" async defer></script>
 </body>
 
 </html>

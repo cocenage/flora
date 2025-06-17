@@ -46,7 +46,7 @@
         <!-- Кнопка (только на десктопе) -->
         <div class="hidden lg:block">
             <a href="#" class="btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#70B7F9] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
-                <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-[#70B7F9]">Заказать!</span>
+                <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-[#70B7F9]">Создать букет</span>
                 <span class="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group-hover:blur-[1px]"></span>
             </a>
         </div>
@@ -103,7 +103,7 @@
             </div>
             <div class="w-full">
                 <a href="#" class="w-full btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-8 py-3 bg-[#70B7F9] text-black font-medium">
-                    Заказать!
+                    Создать букет
                 </a>
                 <div class="flex gap-[15px] w-full items-center justify-center pt-[20px]">
                     <a target="_blank" href="https://vk.com/club231052713">
