@@ -1,4 +1,4 @@
-<div class="mx-auto p-8 bg-white text-black rounded-2xl shadow-lg">
+<div class="mx-auto p-8 bg-white text-black ">
     <div class="text-center mb-8">
         <h2 class="text-3xl font-bold text-gray-900 mb-2">Заказать букет</h2>
 

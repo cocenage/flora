@@ -68,9 +68,9 @@
 
     <div class="relative">
         <!-- Контейнер для скролла -->
-        <div class="flex overflow-x-auto space-x-[10px] lg:space-x-0 px-[10px] snap-x snap-mandatory whitespace-nowrap py-4  lg:overflow-x-visible lg:grid lg:grid-cols-3 lg:gap-[10px] lg:whitespace-normal lg:py-0 lg:mx-0">
+        <div class="flex overflow-x-auto space-x-[10px] mx-[10px] lg:space-x-0  snap-x snap-mandatory whitespace-nowrap py-4  lg:overflow-x-visible lg:grid lg:grid-cols-3 lg:gap-[10px] lg:whitespace-normal lg:py-0 lg:mx-0">
             <!-- Блок 1 -->
-            <div class="w-[80vw] flex-shrink-0 snap-start lg:w-auto lg:col-span-1">
+            <div class=" w-[80vw] flex-shrink-0 snap-start lg:w-auto lg:col-span-1">
                 <a href="#" class="relative block overflow-hidden group whitespace-normal">
                     <img
                         src="{{ asset('images/base0.webp') }}"
