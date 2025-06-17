@@ -8,7 +8,7 @@
 <section>
     <div class="py-[50px] flex flex-col items-center justify-center">
 
-        <h1 class="text-[50px] mt-[32px] underline decoration-3 underline-offset-8">Flora – язык ваших чувств</h1>
+        <h1 class="text-[50px] mt-[32px] underline decoration-3 underline-offset-8">Flora – язык ваших чувств.</h1>
 
 
 
@@ -194,7 +194,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-[#FFFFFF]">
+    <div class="bg-[#F5F3EB]">
         <div class="py-[25px] px-[50px] lg:py-[50px] lg:px-[250px]">
             <p class="text-[32px] mb-[40px]">Вопросы и ответы</p>
             <div class="w-full mx-auto">

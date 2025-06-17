@@ -10,8 +10,17 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-html {
-    background: #F7F7B9;
+:root {
+  --bg-color: #F7F7B9;
+}
+
+html, body {
+  background-color: var(--bg-color);
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
   @keyframes infinite-scroll {
@@ -26,3 +35,13 @@ html {
   }
 
 
+@keyframes lineOut {
+    0% { transform: scaleX(0); transform-origin: left; }
+    50% { transform: scaleX(1); transform-origin: left; }
+    51% { transform-origin: right; }
+    100% { transform: scaleX(0); transform-origin: right; }
+}
+
+.hover\:animate-line-out:hover {
+    animation: lineOut 1s ease-out forwards;
+}
