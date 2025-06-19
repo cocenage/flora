@@ -1,64 +1,63 @@
-<div class="mx-auto p-8 bg-white text-black ">
-    <div class="text-center mb-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-2">Заказать букет</h2>
+<div class="w-full h-full mx-auto p-6 text-white">
+    <h2 class="text-[30px] lg:text-[40px] mb-[20px] lg:mb-[40px] text-center">Свяжитесь с нами</h2>
 
-    </div>
-
-    @if(session()->has('message'))
-        <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-6 rounded">
-            <p class="text-green-700">{{ session('message') }}</p>
+    @if(session()->has('success'))
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+            {{ session('success') }}
         </div>
     @endif
 
-    <form wire:submit.prevent="submit" class="space-y-6 text-black">
-        <!-- Поле телефона -->
-        <div x-data>
-            <input
-                x-mask="'+7 (999) 999-99-99'"
-                wire:model="phone"
-                type="tel"
-                placeholder="+7 (___) ___-__-__"
-                class="w-full px-5 py-3 border-0 rounded-lg bg-gray-100 focus:bg-white focus:ring-2 focus:ring-blue-400 transition-all duration-200 placeholder-gray-400"
-            >
-            @error('phone') <p class="mt-1 text-sm text-red-500">{{ $message }}</p> @enderror
+    @error('form')
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+            {{ $message }}
         </div>
+    @enderror
 
-        <!-- Поле email -->
-        <div>
+    <form class="flex flex-col justify-center items-center" wire:submit.prevent="submit">
+        <!-- Скрытое honeypot-поле -->
+        <input type="text" name="website" wire:model="honeypot" style="display: none;">
+
+<div class="w-full mb-4">
+    <input
+        wire:model="phone"
+        type="tel"
+        placeholder="Номер телефона"
+        class="w-full px-6 py-4 border-2 rounded-full focus:outline-none"
+         wire:model.defer="phone"
+                            id="phone"
+    >
+    @error('phone') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+</div>
+
+        <!-- Остальные поля формы -->
+        <div class="w-full mb-4">
             <input
                 wire:model="email"
                 type="email"
-                placeholder="Ваша почта"
-                class="w-full px-5 py-3 border-0 rounded-lg bg-gray-100 focus:bg-white focus:ring-2 focus:ring-blue-400 transition-all duration-200 placeholder-gray-400"
+                placeholder="Email"
+                class="w-full px-6 py-4 border-2 rounded-full focus:outline-none  "
             >
-            @error('email') <p class="mt-1 text-sm text-red-500">{{ $message }}</p> @enderror
+            @error('email') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
 
-        <!-- Поле сообщения -->
-        <div>
+        <div class="w-full ">
             <textarea
                 wire:model="message"
-                placeholder="Ваше сообщение"
+                placeholder="Your message"
                 rows="4"
-                class="w-full px-5 py-3 border-0 rounded-lg bg-gray-100 focus:bg-white focus:ring-2 focus:ring-blue-400 transition-all duration-200 placeholder-gray-400"
+                class="w-full px-6 py-4 border-2 text-white rounded-[30px] focus:outline-none  "
             ></textarea>
-            @error('message') <p class="mt-1 text-sm text-red-500">{{ $message }}</p> @enderror
+            @error('message') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
 
-        <!-- reCAPTCHA -->
-        <div wire:ignore>
-            <div id="g-recaptcha" class="g-recaptcha"></div>
-            @error('recaptchaToken') <p class="mt-1 text-sm text-red-500">{{ $message }}</p> @enderror
-        </div>
 
-        <!-- Кнопка -->
-        <button
-            type="submit"
-            class="w-full py-3 px-6 bg-black text-white font-medium rounded-lg hover:bg-gray-800 transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2"
-        >
-            Заказать
+                <button   type="submit"
+    class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#fff] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
+            <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-[#fff]">Отправить</span>
+
+            <!-- Анимированный фон -->
+            <span class="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group-hover:blur-[1px]"></span>
         </button>
+
     </form>
 </div>
-
-

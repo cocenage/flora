@@ -4,73 +4,78 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Feedback;
-use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Validation\Rule;
 
 class FeedbackForm extends Component
 {
-    public $phone;
-    public $email;
-    public $message;
-    public $recaptchaToken;
+    public $phone = '';
+    public $email = '';
+    public $message = '';
+    public $honeypot = '';
+    public $form_time;
 
-    protected $rules = [
-        'phone' => 'nullable|string|regex:/^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/',
-        'email' => 'nullable|email|max:255',
-        'message' => 'required|string|min:10|max:1000',
-        'recaptchaToken' => 'required|string',
-    ];
-
-    protected $listeners = [
-        'recaptcha-verified' => 'setRecaptchaToken',
-        'recaptcha-expired' => 'clearRecaptchaToken',
-        'recaptcha-error' => 'handleRecaptchaError'
-    ];
-
-    public function setRecaptchaToken($event)
+    protected function rules()
     {
-        $this->recaptchaToken = $event['token'];
-        $this->resetErrorBag('recaptchaToken');
+        return [
+            'phone' => 'nullable|string|max:20|regex:/^[\d\s\(\)\+-]*$/',
+            'email' => 'nullable|email:rfc,dns|max:255',
+            'message' => [
+                'required',
+                'string',
+                'min:10',
+                'max:1000',
+                Rule::notIn(['http://', 'https://', 'www.']), // Защита от ссылок
+                function ($attribute, $value, $fail) {
+                    if (preg_match('/<[^>]*>/', $value)) {
+                        $fail('Сообщение содержит HTML-теги.');
+                    }
+                },
+            ],
+        ];
     }
 
-    public function clearRecaptchaToken()
+    public function mount()
     {
-        $this->recaptchaToken = null;
-        $this->addError('recaptchaToken', 'Проверка reCAPTCHA истекла. Пожалуйста, пройдите её снова.');
-    }
-
-    public function handleRecaptchaError()
-    {
-        $this->recaptchaToken = null;
-        $this->addError('recaptchaToken', 'Произошла ошибка при проверке reCAPTCHA. Пожалуйста, попробуйте ещё раз.');
+        $this->form_time = microtime(true);
     }
 
     public function submit()
     {
         $this->validate();
 
-        // Проверка reCAPTCHA на сервере
-        $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-            'secret' => config('services.recaptcha.secret'),
-            'response' => $this->recaptchaToken,
-            'remoteip' => request()->ip(),
-        ]);
-
-        if (!$response->json('success')) {
-            $this->addError('recaptchaToken', 'Не удалось проверить reCAPTCHA. Пожалуйста, попробуйте ещё раз.');
-            $this->dispatch('reset-recaptcha');
+        // Honeypot проверка
+        if ($this->honeypot !== '') {
             return;
         }
 
-        // Сохранение данных
-        Feedback::create([
-            'phone' => $this->phone,
-            'email' => $this->email,
-            'message' => $this->message,
-        ]);
+        // Проверка времени заполнения
+        if ((microtime(true) - $this->form_time) < 3) {
+            $this->addError('form', 'Форма заполнена слишком быстро!');
+            return;
+        }
 
-        $this->reset();
-        $this->dispatch('reset-recaptcha');
-        session()->flash('message', 'Спасибо! Мы свяжемся с вами в ближайшее время.');
+        // Ограничение частоты запросов
+        $executed = RateLimiter::attempt(
+            'feedback-form:'.request()->ip(),
+            3,
+            function() {
+                Feedback::create([
+                    'phone' => strip_tags($this->phone),
+                    'email' => filter_var($this->email, FILTER_SANITIZE_EMAIL),
+                    'message' => htmlspecialchars($this->message, ENT_QUOTES, 'UTF-8'),
+                ]);
+            },
+            60
+        );
+
+        if (!$executed) {
+            $this->addError('form', 'Слишком много попыток! Попробуйте позже.');
+            return;
+        }
+
+        $this->reset(['phone', 'email', 'message']);
+        session()->flash('success', 'Спасибо! Ваше сообщение отправлено.');
     }
 
     public function render()

@@ -1,8 +1,12 @@
-<header x-data="{ scrolled: false, mobileMenuOpen: false }"
-    x-on:scroll.window="scrolled = window.scrollY > 10"
-
+<header
+    x-data="{ scrolled: false, mobileMenuOpen: false }"
+    @scroll.window="scrolled = window.scrollY > 10"
     :class="{'shadow-md': scrolled}"
-    class="py-[15px] px-[15px] lg:py-[25px] lg:px-[250px] sticky top-0 bg-[#F7F7B9] z-[100] transition-all duration-300 ease-out">
+    class="py-[15px] px-[15px] lg:py-[25px] lg:px-[250px] sticky top-0 z-[100] transition-all duration-300 ease-out
+           {{ Route::currentRouteName() === 'page.about' ? 'bg-[#b8a4fd]' : 'bg-[#F7F7B9]' }}
+           {{ Route::currentRouteName() === 'page.blog' ? 'bg-[#f0efed]' : 'bg-[#F7F7B9]' }}
+            {{ Route::currentRouteName() === 'single.blog' ? 'bg-[#f0efed]' : 'bg-[#F7F7B9]' }}
+           {{ Route::currentRouteName() === 'page.contact' ? 'bg-[#bfd6c2]' : 'bg-[#F7F7B9]' }}">
 
     <nav class="w-full flex justify-between items-center">
 
@@ -22,8 +26,8 @@
         <!-- Основное меню (скрыто на мобильных) -->
         <div class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 gap-[15px]">
             <!-- Ваши ссылки меню -->
-            <a href="" class="group relative inline-block cursor-pointer overflow-hidden">
-                <span class="relative z-10 text-[14px] font-medium">О нас</span>
+            <a wire:navigate href="{{ route('page.about') }}" class="group relative inline-block cursor-pointer overflow-hidden">
+                <span class="relative z-10 text-[16px] font-medium">О нас</span>
                 <div class="
         absolute bottom-0 left-0 h-0.25 w-full bg-black
         transform -translate-x-full
@@ -31,8 +35,17 @@
         group-hover:translate-x-0 group-active:translate-x-0
     "></div>
             </a>
-            <a href="" class="group relative inline-block cursor-pointer overflow-hidden">
-                <span class="relative z-10 text-[14px] font-medium">Новости</span>
+            <a wire:navigate href="{{ route('page.blog') }}" class="group relative inline-block cursor-pointer overflow-hidden">
+                <span class="relative z-10 text-[16px] font-medium">Новости</span>
+                <div class="
+        absolute bottom-0 left-0 h-0.25 w-full bg-black
+        transform -translate-x-full
+        transition-transform duration-500 ease-in-out
+        group-hover:translate-x-0 group-active:translate-x-0
+    "></div>
+            </a>
+            <a wire:navigate href="{{ route('page.contact') }}" class="group relative inline-block cursor-pointer overflow-hidden">
+                <span class="relative z-10 text-[16px] font-medium">Контакты</span>
                 <div class="
         absolute bottom-0 left-0 h-0.25 w-full bg-black
         transform -translate-x-full
@@ -45,7 +58,7 @@
 
         <!-- Кнопка (только на десктопе) -->
         <div class="hidden lg:block">
-            <a href="#" class="btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#70B7F9] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
+            <a href="#section-id" class="btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#70B7F9] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
                 <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-[#70B7F9]">Создать букет</span>
                 <span class="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group-hover:blur-[1px]"></span>
             </a>
@@ -79,7 +92,7 @@
                 <!-- Ссылки меню для мобильных -->
                 <div class="flex flex-col space-y-3 pt-[25px]">
 
-                    <a href="" class="group relative inline-block cursor-pointer overflow-hidden" @click="mobileMenuOpen = false">
+                    <a wire:navigate href="{{ route('page.about') }}" class="group relative inline-block cursor-pointer overflow-hidden" @click="mobileMenuOpen = false">
                         <span class="relative z-10 text-[20px] ">О нас</span>
                         <div class="
         absolute bottom-0 left-0 h-0.25 w-full bg-black
@@ -88,7 +101,7 @@
         group-hover:translate-x-0 group-active:translate-x-0
     "></div>
                     </a>
-                    <a href="" class="group relative inline-block cursor-pointer overflow-hidden" @click="mobileMenuOpen = false">
+                    <a wire:navigate href="{{ route('page.blog') }}" class="group relative inline-block cursor-pointer overflow-hidden" @click="mobileMenuOpen = false">
                         <span class="relative z-10 text-[20px] ">Новости</span>
                         <div class="
         absolute bottom-0 left-0 h-0.25 w-full bg-black
@@ -98,11 +111,19 @@
     "></div>
                     </a>
 
-
+                    <a wire:navigate href="{{ route('page.contact') }}" class="group relative inline-block cursor-pointer overflow-hidden" @click="mobileMenuOpen = false">
+                        <span class="relative z-10 text-[20px] ">Контакты</span>
+                        <div class="
+        absolute bottom-0 left-0 h-0.25 w-full bg-black
+        transform -translate-x-full
+        transition-transform duration-500 ease-in-out
+        group-hover:translate-x-0 group-active:translate-x-0
+    "></div>
+                    </a>
                 </div>
             </div>
             <div class="w-full">
-                <a href="#" class="w-full btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-8 py-3 bg-[#70B7F9] text-black font-medium">
+                <a href="#section-id" class="w-full btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-8 py-3 bg-[#70B7F9] text-black font-medium">
                     Создать букет
                 </a>
                 <div class="flex gap-[15px] w-full items-center justify-center pt-[20px]">

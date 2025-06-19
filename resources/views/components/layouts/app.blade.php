@@ -15,22 +15,22 @@
     <meta name="language" content="ru">
     @stack('meta')
 
-     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
     <div x-data="{ showPreloader: true }"
-     x-init="setTimeout(() => showPreloader = false, 500)"
-     x-show="showPreloader"
-     x-transition:leave="transition ease-out duration-500"
-     x-transition:leave-start="opacity-100"
-     x-transition:leave-end="opacity-0"
-     class="fixed inset-0 bg-black z-[9999] flex items-center justify-center">
-</div>
+        x-init="setTimeout(() => showPreloader = false, 500)"
+        x-show="showPreloader"
+        x-transition:leave="transition ease-out duration-500"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        class="fixed inset-0 bg-black z-[9999] flex items-center justify-center">
+    </div>
     <livewire:partials.header />
     {{ $slot }}
     <livewire:partials.footer />
-<script src="https://www.google.com/recaptcha/api.js?onload=initRecaptcha&render=explicit" async defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8b1b122a-9c7f-4d04-8853-a0e58b031cce&lang=ru_RU"></script>
 </body>
 
 </html>

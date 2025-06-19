@@ -18,7 +18,7 @@
 
 
         <a   data-aos="fade-up"
-    data-aos-delay="200"  href="#" class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#70B7F9] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
+    data-aos-delay="200" href="#section-id" class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#70B7F9] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
             <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-[#70B7F9]">Создать букет</span>
 
             <!-- Анимированный фон -->
@@ -68,10 +68,10 @@
 
     <div class="relative">
         <!-- Контейнер для скролла -->
-        <div class="flex overflow-x-auto space-x-[10px] mx-[10px] lg:space-x-0  snap-x snap-mandatory whitespace-nowrap py-4  lg:overflow-x-visible lg:grid lg:grid-cols-3 lg:gap-[10px] lg:whitespace-normal lg:py-0 lg:mx-0">
+        <div class="flex overflow-x-auto space-x-[10px] mx-[10px] lg:space-x-0  snap-x snap-mandatory whitespace-nowrap py-4  lg:overflow-x-visible lg:grid lg:grid-cols-3 lg:gap-[10px] lg:whitespace-normal lg:py-0 ">
             <!-- Блок 1 -->
             <div class=" w-[80vw] flex-shrink-0 snap-start lg:w-auto lg:col-span-1">
-                <a href="#" class="relative block overflow-hidden group whitespace-normal">
+                <a wire:navigate href="{{ route('page.about') }}" class="relative block overflow-hidden group whitespace-normal">
                     <img
                         src="{{ asset('images/base0.webp') }}"
                         alt="img"
@@ -84,7 +84,7 @@
 
             <!-- Блок 2 -->
             <div class="w-[80vw] flex-shrink-0 snap-start lg:w-auto lg:col-span-1">
-                <a href="#" class="relative block overflow-hidden group whitespace-normal">
+                <a wire:navigate href="{{ route('page.blog') }}" class="relative block overflow-hidden group whitespace-normal">
                     <img
                         src="{{ asset('images/base.webp') }}"
                         alt="img"
@@ -97,13 +97,13 @@
 
             <!-- Блок 3 -->
             <div class="w-[80vw] flex-shrink-0 snap-start lg:w-auto lg:col-span-1">
-                <a href="#" class="relative block overflow-hidden group whitespace-normal">
+                <a wire:navigate href="{{ route('page.contact') }}" class="relative block overflow-hidden group whitespace-normal">
                     <img
                         src="{{ asset('images/base2.webp') }}"
                         alt="img"
                         class="bg-black shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
                     <span class="absolute inset-0 flex items-center justify-center text-[30px] lg:text-[40px] text-white">
-                        Текст
+                        Контакты
                     </span>
                 </a>
             </div>
@@ -256,30 +256,32 @@
         </div>
     </div>
 </div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-[10px] bg-black">
-        <a href="">
-        <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
-            <h2 class="text-[30px] lg:text-[40px] mb-[20px] lg:mb-[40px]">Цветы-антистресс: какие растения дарят для уюта</h2>
-            <p class="text-[20px]">Подборка ароматных и неприхотливых вариантов — для атмосферы комфорта</p>
-            <img src="{{ asset('images/21.webp') }}" alt="img" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
-        </div>
-        </a>
-           <a href="">
-        <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
-            <h2 class="text-[30px] lg:text-[40px] mb-[20px] lg:mb-[40px]">Идеальный букет за 5 минут: как выбрать без стресса</h2>
-            <p class="text-[20px]">Гид по сочетаниям цветов и поводам — чтобы ваш подарок запомнился</p>
-            <img src="{{ asset('images/22.webp') }}" alt="img" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
-        </div>
-        </a>    <a href="">
-        <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
-            <h2 class="text-[40px] mb-[20px] lg:mb-[40px]">7 секретов свежести: как продлить жизнь букету</h2>
-            <p class="text-[20px]">Простые лайфхаки от флористов — чтобы цветы радовали дольше обычного</p>
-            <img src="{{ asset('images/23.webp') }}" alt="img" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
-        </div>
-        </a>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-[10px] bg-black">
+
+    <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
+        <h2 class="text-[30px] lg:text-[40px] mb-[20px] lg:mb-[40px]">Экологичная флористика</h2>
+        <p class="text-[20px]">Используем биоразлагаемую упаковку и экологичные методы выращивания. Заботимся о природе</p>
+        <img src="{{ asset('images/21.webp') }}" alt="Эко-упаковка" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
     </div>
+
+    <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
+        <h2 class="text-[30px] lg:text-[40px] mb-[20px] lg:mb-[40px]">Мастера своего дела</h2>
+        <p class="text-[20px]">Наши флористы с 10+ летним опытом создадут идеальную композицию специально для вас</p>
+        <img src="{{ asset('images/22.webp') }}" alt="Доставка цветов" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
+    </div>
+
+
+
+    <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
+        <h2 class="text-[40px] mb-[20px] lg:mb-[40px]">Персональный подход</h2>
+        <p class="text-[20px]">Создаем букеты по вашему описанию. Поможем подобрать идеальный вариант для любого события</p>
+        <img src="{{ asset('images/23.webp') }}" alt="Индивидуальный букет" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
+    </div>
+
+</div>
     <div class="bg-[#E69F60]">
-        <div class="py-[40px] px-[40px] lg:py-[50px] lg:px-[250px]">
+        <div data-aos="fade-up"
+    data-aos-delay="300" class="py-[40px] px-[40px] lg:py-[50px] lg:px-[250px]">
             <div
     class="grid grid-cols-1 xl:grid-cols-3">
                 <div class="col-span-2">
@@ -309,7 +311,8 @@
     </div>
     <div
       class="bg-[#F5F3EB]">
-        <div
+        <div data-aos="fade-up"
+    data-aos-delay="200"
      class="py-[40px] px-[40px] lg:py-[50px] lg:px-[250px]">
             <p class="text-[32px] mb-[40px]">Вопросы и ответы</p>
             <div class="w-full mx-auto">
@@ -501,7 +504,7 @@
                 </div>
             </div>
             <div class="flex w-full items-center justify-center mx-auto">
-                <a href="#" class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-none border-1 text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
+                <a href="#section-id" class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-none border-1 text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
                     <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-white">Создать букет</span>
 
                     <!-- Анимированный фон -->

@@ -16,6 +16,7 @@
 
 html, body {
   background-color: var(--bg-color);
+   scroll-behavior: smooth;
 
 }
 body {
@@ -42,7 +43,7 @@ body {
 }
 
 .animate-infinite-scroll {
-    animation: infinite-scroll 30s linear infinite;
+    animation: infinite-scroll 100s linear infinite;
     display: inline-flex;
     min-width: 200%; /* Увеличиваем ширину для плавности */
 }
@@ -74,3 +75,4 @@ body {
     from { transform: scale(var(--start-scale)); }
     to { transform: scale(var(--end-scale)); }
 }
+
