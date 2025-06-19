@@ -26,7 +26,7 @@
                  class="shrink-animation w-full h-full max-h-[700px] object-cover ">
         </div>
     </div>
-    <div class="flex w-full items-center justify-center">
+    <div class="flex w-full items-center justify-center px-[20px]">
       <div class="prose max-w-none text-[20px]">
     {!! $blog->description !!}
 </div>
@@ -34,7 +34,7 @@
 
 
 
-    <div class="">
+    <div class="pt-[20px]">
 
         <livewire:blog.blog-last :currentSlug="$blog->slug" />
     </div>
