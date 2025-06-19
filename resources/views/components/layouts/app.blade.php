@@ -30,7 +30,6 @@
     <livewire:partials.header />
     {{ $slot }}
     <livewire:partials.footer />
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=8b1b122a-9c7f-4d04-8853-a0e58b031cce&lang=ru_RU"></script>
 </body>
 
 </html>

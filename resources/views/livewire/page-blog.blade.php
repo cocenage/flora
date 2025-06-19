@@ -8,7 +8,7 @@
 <section class="bg-[#f0efed]">
         <div class="py-[30px] lg:py-[50px] flex flex-col items-center justify-center">
 
-        <h1 class="text-[30px] lg:text-[50px] mt-[16px] underline decoration-1 lg:decoration-3 underline-offset-8">Flora Блог - цветочная мудрость text-center</h1>
+        <h1 class="text-[30px] lg:text-[50px] mt-[16px] underline decoration-1 lg:decoration-3 underline-offset-8 text-center">Flora Блог - цветочная мудрость </h1>
 
 
 

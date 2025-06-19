@@ -6,14 +6,14 @@
 @endpush
 
 
-<section class="bg-[#f0efed] py-[40px] px-[40px] lg:py-[50px] lg:px-[250px]">
+<section class="bg-[#f0efed] py-[15px] px-[15px] lg:py-[50px] lg:px-[250px]">
 
 
 
         <!-- Заголовок статьи -->
         <!-- <h2 class="text-[30px] lg:text-[40px] mb-[20px] lg:mb-[40px]">{{ $blog->name }}</h2> -->
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px] py-[40px] px-[40px] lg:py-[80px] lg:px-[250px]">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
 
         <div class="col-span-1 flex flex-col">
             <h2 class="text-[30px] lg:text-[40px] mb-[20px] lg:mb-[40px]">{{ $blog->name }}</h2>
