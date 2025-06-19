@@ -34,7 +34,7 @@
             <input
                 wire:model="email"
                 type="email"
-                placeholder="Email"
+                placeholder="Почта"
                 class="w-full px-6 py-4 border-2 rounded-full focus:outline-none  "
             >
             @error('email') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
@@ -43,7 +43,7 @@
         <div class="w-full ">
             <textarea
                 wire:model="message"
-                placeholder="Your message"
+                placeholder="Ваше сообщение"
                 rows="4"
                 class="w-full px-6 py-4 border-2 text-white rounded-[30px] focus:outline-none  "
             ></textarea>

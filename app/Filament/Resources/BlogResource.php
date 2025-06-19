@@ -98,17 +98,17 @@ class BlogResource extends Resource
                         Tabs\Tab::make('Meta-поля')->schema([
                             TextInput::make('meta_title')
                                 ->label('Meta-заголовок (SEO)')
-                                ->placeholder('Консультации в ветеринарной клинике Neovet — Заботьтесь о здоровье ваших питомцев!')
+                       
                                 ->required(),
                             TextInput::make('meta_keywords')
                                 ->label('Ключевые слова для поисковых систем')
 
-                                ->placeholder('ветеринарные консультации, Neovet, ветеринарная клиника, здоровье животных, уход за питомцами, лечение животных, советы ветеринара')
+
                                 ->required(),
                             Textarea::make('meta_description')
                                 ->label('Описание для поисковых систем')
 
-                                ->placeholder('Запишитесь на консультацию в ветеринарной клинике Neovet! Наши опытные ветеринары готовы предоставить профессиональные советы и помощь в заботе о здоровье ваших любимцев!')
+
                                 ->required(),
                         ]),
                     ])->columnSpanFull(),

@@ -8,12 +8,12 @@
 <div class="">
        <div class="py-[30px] lg:py-[50px] flex flex-col items-center justify-center">
 
-        <h1 class="text-[30px] lg:text-[50px] mt-[16px] underline decoration-1 lg:decoration-3 underline-offset-8">Страница не найдена</h1>
+        <h1 class="text-[30px] lg:text-[50px] mt-[16px] underline decoration-1 lg:decoration-3 underline-offset-8 text-center">Страница не найдена</h1>
 
 
 
         <p       data-aos="fade-up"
-    data-aos-delay="200"  class="18px mt-[12px] text-center max-w-[600px]"> Запрошенная вами страница не существует.</p>
+    data-aos-delay="200"  class="18px mt-[12px] text-center max-w-[600px] px-[10px]"> Запрошенная вами страница не существует.</p>
 
 
 

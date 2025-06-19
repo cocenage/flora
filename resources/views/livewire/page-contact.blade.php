@@ -1,11 +1,4 @@
 @push('meta')
-<title>{{ 'Полезные статьи о цветах – Блог Flora Волгоград' }}</title>
-<meta name="description" content="Советы флористов, тренды в цветочном дизайне и идеи для подарков. Читайте наш блог и узнавайте больше о мире цветов в Волгограде.">
-<meta name="keywords" content="цветочный блог, статьи о цветах, советы флористов, уход за цветами, идеи букетов, тренды флористики, Flora Волгоград, как выбрать цветы">
-<meta name="robots" content="index, follow">
-@endpush
-
-@push('meta')
 <title>{{ 'Контакты цветочного магазина Flora в Волгограде – адрес, телефон, режим работы' }}</title>
 <meta name="description" content="Контактная информация магазина цветов Flora в Волгограде. Наш адрес, телефон, электронная почта и режим работы. Быстрая доставка свежих букетов по всему городу.">
 <meta name="keywords" content="контакты цветочного магазина Волгоград, адрес Flora Волгоград, телефон доставки цветов, режим работы цветочного, как заказать цветы Волгоград, связаться с флористом">
@@ -14,9 +7,9 @@
 
 <section class="bg-[#bfd6c2]">
     <div class="py-[30px] lg:py-[50px] flex flex-col items-center justify-center bg-[#bfd6c2]">
-        <h1 class="text-[30px] lg:text-[50px] mt-[16px] underline decoration-1 lg:decoration-3 underline-offset-8">Наши контакты</h1>
+        <h1 class="text-[30px] lg:text-[50px] mt-[16px] underline decoration-1 lg:decoration-3 underline-offset-8 text-center">Наши контакты</h1>
 
-        <p data-aos="fade-up" data-aos-delay="200" class="18px mt-[12px] text-center max-w-[600px]">
+        <p data-aos="fade-up" data-aos-delay="200" class="18px mt-[12px] text-center max-w-[600px]  px-[10px]">
             Мы всегда рады общению! Приходите в наш магазин, звоните или пишите - подберем идеальный букет для любого случая.
         </p>
     </div>
@@ -96,8 +89,11 @@
         </div>
 
         <!-- Карта -->
-         <div class="bg-gray-200 overflow-hidden">
-    <div id="map" style="width: 100%; height: 100%"></div>
+         <div class="">
+  <img
+                        src="{{ asset('images/123.webp') }}"
+                        alt="img"
+                        class=" bg-black shrink-animation w-full object-cover h-auto transition-transform duration-300 group-hover:scale-105 aspect-[1/1]">
 </div>
     </div>
 

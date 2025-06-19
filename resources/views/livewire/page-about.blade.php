@@ -9,12 +9,12 @@
 
     <div class="py-[30px] lg:py-[50px] flex flex-col items-center justify-center">
 
-        <h1 class="text-[30px] lg:text-[50px] mt-[16px] underline decoration-1 lg:decoration-3 underline-offset-8">Flora – цветы с душой</h1>
+        <h1 class="text-[30px] lg:text-[50px] mt-[16px] underline decoration-1 lg:decoration-3 underline-offset-8 text-center">Flora – цветы с душой</h1>
 
 
 
         <p data-aos="fade-up"
-            data-aos-delay="200" class="18px mt-[12px] text-center max-w-[600px]"> С 2013 года создаём эмоции через цветочные композиции. Более 50 000 довольных клиентов и 10 000 уникальных букетов.</p>
+            data-aos-delay="200" class="18px mt-[12px] text-center max-w-[600px]  px-[10px]"> С 2013 года создаём эмоции через цветочные композиции. Более 50 000 довольных клиентов и 10 000 уникальных букетов.</p>
 
 
 
