@@ -90,10 +90,9 @@
 
         <!-- Карта -->
          <div class="">
-  <img
-                        src="{{ asset('images/123.webp') }}"
-                        alt="img"
-                        class=" bg-black shrink-animation w-full object-cover h-auto transition-transform duration-300 group-hover:scale-105 aspect-[1/1]">
+
+       <div  wire:ignore.self id="map"></div>
+
 </div>
     </div>
 

@@ -10,7 +10,7 @@
             <img
                 src="{{ asset('storage/' . $data->image) }}"
                 alt="img"
-                class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5] pt-[20px]">
+                class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 object-cover aspect-[4/5] pt-[20px]">
 
         </div>
 

@@ -12,8 +12,8 @@
 
 
 
-        <p       data-aos="fade-up"
-    data-aos-delay="200"  class="18px mt-[12px] text-center max-w-[600px]  px-[10px]">Flora – свежие эмоции в каждом букете. Идеальные цветы для любого повода с быстрой доставкой по Волгограду. Дарите радость просто!</p>
+        <p data-aos="fade-up"
+            data-aos-delay="200" class="18px mt-[12px] text-center max-w-[600px]  px-[10px]">Flora – свежие эмоции в каждом букете. Идеальные цветы для любого повода с быстрой доставкой по Волгограду. Дарите радость просто!</p>
     </div>
     <!-- <div class="lg:grid lg:grid-cols-3 gap-[10px] px-[10px]">
         <div class="col-span-1">
@@ -59,39 +59,39 @@
         <div class="flex overflow-x-auto space-x-[10px] mx-[10px] lg:space-x-0  snap-x snap-mandatory whitespace-nowrap py-4  lg:overflow-x-visible lg:grid lg:grid-cols-3 lg:gap-[10px] lg:whitespace-normal lg:py-0 ">
             <!-- Блок 1 -->
             <div class=" w-[80vw] flex-shrink-0 snap-start lg:w-auto lg:col-span-1">
-                <a wire:navigate href="{{ route('page.about') }}" class="relative block overflow-hidden group whitespace-normal">
+                <a wire:navigate href="{{ route('page.products') }}" class="relative block overflow-hidden group whitespace-normal">
                     <img
-                        src="{{ asset('images/base0.webp') }}"
+                        src="{{ asset('images/1233.webp') }}"
                         alt="img"
                         class=" bg-black shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
                     <span class="absolute inset-0 flex items-center justify-center text-[30px] lg:text-[40px] text-white">
-                        О нас
+                        Розы
                     </span>
                 </a>
             </div>
 
             <!-- Блок 2 -->
             <div class="w-[80vw] flex-shrink-0 snap-start lg:w-auto lg:col-span-1">
-                <a wire:navigate href="{{ route('page.blog') }}" class="relative block overflow-hidden group whitespace-normal">
+                <a wire:navigate href="{{ route('page.products') }}" class="relative block overflow-hidden group whitespace-normal">
                     <img
-                        src="{{ asset('images/base.webp') }}"
+                        src="{{ asset('images/12333.webp') }}"
                         alt="img"
                         class="bg-black shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
                     <span class="absolute inset-0 flex items-center justify-center text-[30px] lg:text-[40px] text-white">
-                        Новости
+                        Пионы
                     </span>
                 </a>
             </div>
 
             <!-- Блок 3 -->
             <div class="w-[80vw] flex-shrink-0 snap-start lg:w-auto lg:col-span-1">
-                <a wire:navigate href="{{ route('page.contact') }}" class="relative block overflow-hidden group whitespace-normal">
+                <a wire:navigate href="{{ route('page.products') }}" class="relative block overflow-hidden group whitespace-normal">
                     <img
-                        src="{{ asset('images/base2.webp') }}"
+                        src="{{ asset('images/123333.webp') }}"
                         alt="img"
                         class="bg-black shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-[4/5]">
                     <span class="absolute inset-0 flex items-center justify-center text-[30px] lg:text-[40px] text-white">
-                        Контакты
+                        Хризантемы
                     </span>
                 </a>
             </div>
@@ -104,7 +104,7 @@
 
 
 
-<!-- <div class="grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-[10px] bg-black">
+    <!-- <div class="grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-[10px] bg-black">
 
     <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
         <h2 class="text-[30px] lg:text-[40px] mb-[20px] lg:mb-[40px]">Экологичная флористика</h2>
@@ -128,20 +128,19 @@
 
 </div> -->
     <div class="bg-[#E69F60]">
-        <div data-aos="fade-up"
-    data-aos-delay="300" class="py-[40px] px-[40px] lg:py-[50px] lg:px-[250px]">
+        <div  class="py-[40px] px-[40px] lg:py-[50px] lg:px-[250px]">
             <div
-    class="grid grid-cols-1 xl:grid-cols-3">
+                class="grid grid-cols-1 xl:grid-cols-3">
                 <div class="col-span-2">
                     <h2 class="text-[30px] lg:text-[40px]">Как заказать цветы за 3 минуты</h2>
                     <p class="16px">Быстро, свежо и с персональной заботой</p>
                 </div>
             </div>
             <div
-    class="grid grid-cols-1 xl:grid-cols-3 gap-[15px] flex-col items-center justify-center pt-[24px]">
+                class="grid grid-cols-1 xl:grid-cols-3 gap-[15px] flex-col items-center justify-center pt-[24px]">
                 <div class="col-span-1">
                     <h2 class="text-[40px] pb-[10px] font-medium">1</h2>
-                    <p class="text-[20px] pb-[20px] font-medium">Позвоните нам</p>
+                    <p class="text-[20px] pb-[20px] font-medium">Позвоните нам <a href="tel:+7903225423" class="hover:underline">+7 (903) 22-54-23</a></p>
                     <p class="text-[16px] lg:w-[75%]">Наши флористы помогут выбрать идеальный букет и уточнят детали.</p>
                 </div>
                 <div class="col-span-1">
@@ -158,10 +157,9 @@
         </div>
     </div>
     <div
-      class="bg-[#F5F3EB]">
-        <div data-aos="fade-up"
-    data-aos-delay="200"
-     class="py-[40px] px-[40px] lg:py-[50px] lg:px-[250px]">
+        class="bg-[#F5F3EB]">
+        <div
+            class="py-[40px] px-[40px] lg:py-[50px] lg:px-[250px]">
             <p class="text-[32px] mb-[40px]">Вопросы и ответы</p>
             <div class="w-full mx-auto">
                 <div x-data="{ selected: null }">

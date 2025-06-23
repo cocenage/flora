@@ -62,7 +62,16 @@ body {
     animation-play-state: paused;
 }
 
+      #map
+{
+width: 100%;
+height: 100%;
+border-radius: 15px;
+   min-height: 800px;
+    z-index: 9 !important;
+        background: #08338F !important;
 
+}
 
 .shrink-animation {
     --start-scale: 1.15;

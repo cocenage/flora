@@ -158,3 +158,46 @@ function initPhoneInput() {
     // Инициализация начального значения
     formatPhone(phoneInput);
 }
+
+
+
+
+
+
+
+// Инициализация карты
+function initMap() {
+  const mapElement = document.getElementById('map');
+  if (!mapElement) return;
+
+  // Удаляем старую карту если есть
+  if (mapElement._leaflet_map) {
+    mapElement._leaflet_map.remove();
+    delete mapElement._leaflet_map;
+  }
+
+  const center = [48.706758, 44.513427];
+  const map = L.map(mapElement, {
+    attributionControl: false,
+    preferCanvas: true
+  }).setView(center, 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    detectRetina: true
+  }).addTo(map);
+
+  L.marker(center)
+    .addTo(map)
+    .bindPopup("ул. Пушкина, 15, Волгоград")
+    .openPopup();
+
+  setTimeout(() => map.invalidateSize(), 100);
+  mapElement._leaflet_map = map;
+}
+
+// Первая загрузка
+document.addEventListener('DOMContentLoaded', initMap);
+
+// Обновление при навигации
+document.addEventListener("livewire:navigated", initMap);

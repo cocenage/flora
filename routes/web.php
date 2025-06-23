@@ -16,5 +16,4 @@ Route::get('/contact', PageContact::class)->name('page.contact');
 Route::get('/news', PageBlog::class)->name('page.blog');
 Route::get('/news/{slug}', SingleBlog::class)->name('single.blog');
 Route::get('/products', PageProducts::class)->name('page.products');
-Route::get('/cart', Cart::class)->name('page.cart');
 Route::get('/{any}', NotFound::class)->where('any', '.*');

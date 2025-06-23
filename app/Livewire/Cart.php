@@ -21,6 +21,13 @@ public function addToCart($productId)
 {
     $this->cart[$productId] = ($this->cart[$productId] ?? 0) + 1;
     $this->dispatch('cartUpdated');
+
+    // Добавляем уведомление
+    $product = Product::find($productId);
+    $this->dispatch('notify',
+        message: "{$product->name} добавлен в корзину",
+        type: 'success'
+    );
 }
 
     public function removeFromCart($productId)
