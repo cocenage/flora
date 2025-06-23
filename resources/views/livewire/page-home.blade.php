@@ -14,18 +14,6 @@
 
         <p       data-aos="fade-up"
     data-aos-delay="200"  class="18px mt-[12px] text-center max-w-[600px]  px-[10px]">Flora – свежие эмоции в каждом букете. Идеальные цветы для любого повода с быстрой доставкой по Волгограду. Дарите радость просто!</p>
-
-
-
-        <a   data-aos="fade-up"
-    data-aos-delay="200" href="#section-id" class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#70B7F9] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
-            <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-[#70B7F9]">Написать нам</span>
-
-            <!-- Анимированный фон -->
-            <span class="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group-hover:blur-[1px]"></span>
-        </a>
-
-
     </div>
     <!-- <div class="lg:grid lg:grid-cols-3 gap-[10px] px-[10px]">
         <div class="col-span-1">
@@ -66,7 +54,7 @@
         </div>
     </div> -->
 
-    <div class="relative">
+    <div class="relative pb-[10px]">
         <!-- Контейнер для скролла -->
         <div class="flex overflow-x-auto space-x-[10px] mx-[10px] lg:space-x-0  snap-x snap-mandatory whitespace-nowrap py-4  lg:overflow-x-visible lg:grid lg:grid-cols-3 lg:gap-[10px] lg:whitespace-normal lg:py-0 ">
             <!-- Блок 1 -->
@@ -115,148 +103,8 @@
 
 
 
-<div class="relative w-full h-[100px] overflow-hidden flex items-center justify-center">
-    <!-- Бегущая строка (основной контейнер) -->
-    <div class="flex animate-infinite-scroll whitespace-nowrap group">
-        <!-- Основные элементы -->
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/5.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/6.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/7.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/8.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/9.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
 
-        <!-- Дубликаты для бесконечного эффекта -->
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <!-- Остальные дубликаты... -->
-                 <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/5.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/6.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/7.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/8.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/9.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-
-        <!-- Дубликаты для бесконечного эффекта -->
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/1.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/2.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/3.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-        <div class="inline-block mx-4">
-            <div class="inline-block transition-all duration-300 hover:scale-105 cursor-default">
-                <img src="{{ asset('images/partners/4.webp') }}" alt="партнер" class="w-[200%] h-[200%]">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-[10px] bg-black">
+<!-- <div class="grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-[10px] bg-black">
 
     <div class="col-span-1 p-[32px] bg-[#CAE3EF] relative block overflow-hidden group">
         <h2 class="text-[30px] lg:text-[40px] mb-[20px] lg:mb-[40px]">Экологичная флористика</h2>
@@ -278,7 +126,7 @@
         <img src="{{ asset('images/23.webp') }}" alt="Индивидуальный букет" class="shrink-animation w-full h-auto transition-transform duration-300 group-hover:scale-105 aspect-square object-cover">
     </div>
 
-</div>
+</div> -->
     <div class="bg-[#E69F60]">
         <div data-aos="fade-up"
     data-aos-delay="300" class="py-[40px] px-[40px] lg:py-[50px] lg:px-[250px]">
