@@ -6,7 +6,7 @@
                 <div class="flex justify-between items-center mb-6">
                     <h3 class="font-bold text-xl text-gray-800">Фильтры</h3>
                     <button wire:click="resetFilters"
-                            class="text-sm text-[#70B7F9] hover:text-indigo-800 transition-colors">
+                            class="text-sm text-[#70B7F9] transition-colors">
                         Сбросить всё
                     </button>
                 </div>
@@ -25,7 +25,7 @@
                             <input type="checkbox"
                                    wire:model.live="selectedCategories"
                                    value="{{ $category->id }}"
-                                   class="rounded border-gray-300 text-[#70B7F9] focus:ring-indigo-500 mr-3 h-4 w-4">
+                                   class="rounded border-gray-300 text-[#70B7F9]  mr-3 h-4 w-4">
                             <span class="text-gray-600 group-hover:text-gray-900 transition-colors">{{ $category->name }}</span>
                         </label>
                         @endforeach
@@ -44,12 +44,12 @@
                         <div class="relative flex-1">
                             <input type="number" wire:model.live.debounce.500ms="minPrice"
                                    placeholder="От"
-                                   class="w-full pl-3 pr-3 py-2 border border-gray-300  focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500">
+                                   class="w-full pl-3 pr-3 py-2 border border-gray-300  focus:ring-2 ">
                         </div>
                         <div class="relative flex-1">
                             <input type="number" wire:model.live.debounce.500ms="maxPrice"
                                    placeholder="До"
-                                   class="w-full pl-3 pr-3 py-2 border border-gray-300  focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500">
+                                   class="w-full pl-3 pr-3 py-2 border border-gray-300  focus:ring-2 ">
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                         @endif
                     </h2>
                     <select wire:model.live="sortBy"
-                            class="border border-gray-300 text-gray-700 py-2 px-4 pr-8  leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500">
+                            class="border border-gray-300 text-gray-700 py-2 px-4 pr-8  leading-tight focus:outline-none focus:ring-2 ">
                         <option value="default">По умолчанию</option>
                         <option value="price_asc">Сначала дешевые</option>
                         <option value="price_desc">Сначала дорогие</option>
@@ -124,7 +124,7 @@
                     <h3 class="mt-3 text-lg font-medium text-gray-900">Товары не найдены</h3>
                     <p class="mt-2 text-gray-500">Попробуйте изменить параметры фильтрации</p>
                     <button wire:click="resetFilters"
-                            class="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#70B7F9] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#70B7F9]  focus:outline-none focus:ring-2 focus:ring-offset-2 ">
                         Сбросить фильтры
                     </button>
                 </div>

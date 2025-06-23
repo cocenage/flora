@@ -95,6 +95,7 @@ class ProductResource extends Resource
                 Group::make()->schema([
                     Section::make()->schema([
                     Select::make('categories')
+                    ->label('Категория')
                     ->relationship('categories', 'name')
                     ->multiple()
                     ->preload()
