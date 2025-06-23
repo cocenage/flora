@@ -76,3 +76,10 @@ body {
     to { transform: scale(var(--end-scale)); }
 }
 
+    .cart-enter-active, .cart-leave-active {
+        transition: all 0.3s ease;
+    }
+    .cart-enter-from, .cart-leave-to {
+        opacity: 0;
+        transform: translateY(20px);
+    }

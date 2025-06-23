@@ -27,8 +27,17 @@
         x-transition:leave-end="opacity-0"
         class="fixed inset-0 bg-black z-[9999] flex items-center justify-center">
     </div>
+    @if (session()->has('message'))
+    <div x-data="{ show: true }"
+        x-show="show"
+        x-init="setTimeout(() => show = false, 3000)"
+        class="fixed bottom-4 left-4 bg-green-500 text-white px-4 py-2 rounded-md shadow-lg">
+        {{ session('message') }}
+    </div>
+    @endif
     <livewire:partials.header />
     {{ $slot }}
+    <livewire:cart />
     <livewire:partials.footer />
 </body>
 
