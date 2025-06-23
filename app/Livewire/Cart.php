@@ -12,17 +12,26 @@ class Cart extends Component
     public $name;
     public $phone;
 
-    protected $listeners = ['add-to-cart' => 'addToCart'];
+protected $listeners = [
+    'add-to-cart' => 'addToCart',
+    'cartUpdated' => '$refresh'
+];
 
-    public function addToCart($productId)
-    {
-        $this->cart[$productId] = ($this->cart[$productId] ?? 0) + 1;
-    }
+public function addToCart($productId)
+{
+    $this->cart[$productId] = ($this->cart[$productId] ?? 0) + 1;
+    $this->dispatch('cartUpdated');
+}
 
     public function removeFromCart($productId)
     {
         unset($this->cart[$productId]);
     }
+
+public function getCartCountProperty()
+{
+    return array_sum($this->cart);
+}
 
 public function checkout()
 {
@@ -88,7 +97,8 @@ public function decrement($productId)
 
         return view('livewire.cart', [
             'products' => $products,
-            'total' => $total
+            'total' => $total,
+                'cart' => $this->cart // Добавляем эту строку
         ]);
     }
 }

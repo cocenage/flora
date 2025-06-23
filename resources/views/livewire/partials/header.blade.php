@@ -1,3 +1,4 @@
+@props(['cart' => []]) <!-- Добавляем параметр по умолчанию -->
 <header
     x-data="{ scrolled: false, mobileMenuOpen: false }"
     @scroll.window="scrolled = window.scrollY > 10"
@@ -15,7 +16,20 @@
         <a href="/" wire:navigate>
             <img src="{{ asset('images/logo.svg') }}" alt="logo" class="h-[30px] lg:h-[40px]">
         </a>
-
+       <div class="flex items-center space-x-4">
+ <div class="flex items-center space-x-4">
+            <!-- Кнопка корзины -->
+            <button @click="cartOpen = !cartOpen" class="relative p-2 text-gray-700 hover:text-indigo-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                @if(is_array($cart) && count($cart) > 0)
+                    <span class="absolute -top-1 -right-1 bg-indigo-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                        {{ array_sum($cart) }}
+                    </span>
+                @endif
+            </button>
+        </div>
         <!-- Бургер-меню (видно только на мобильных) -->
         <button @click="mobileMenuOpen = true" class="lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -26,6 +40,24 @@
         <!-- Основное меню (скрыто на мобильных) -->
         <div class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 gap-[15px]">
             <!-- Ваши ссылки меню -->
+                         <a wire:navigate href="{{ route('page.home') }}" class="group relative inline-block cursor-pointer overflow-hidden">
+                <span class="relative z-10 text-[16px] font-medium">Главная</span>
+                <div class="
+        absolute bottom-0 left-0 h-0.25 w-full bg-black
+        transform -translate-x-full
+        transition-transform duration-500 ease-in-out
+        group-hover:translate-x-0 group-active:translate-x-0
+    "></div>
+            </a>
+                        <a wire:navigate href="{{ route('page.products') }}" class="group relative inline-block cursor-pointer overflow-hidden">
+                <span class="relative z-10 text-[16px] font-medium">Каталог</span>
+                <div class="
+        absolute bottom-0 left-0 h-0.25 w-full bg-black
+        transform -translate-x-full
+        transition-transform duration-500 ease-in-out
+        group-hover:translate-x-0 group-active:translate-x-0
+    "></div>
+            </a>
             <a wire:navigate href="{{ route('page.about') }}" class="group relative inline-block cursor-pointer overflow-hidden">
                 <span class="relative z-10 text-[16px] font-medium">О нас</span>
                 <div class="
@@ -91,7 +123,24 @@
                 </div>
                 <!-- Ссылки меню для мобильных -->
                 <div class="flex flex-col space-y-3 pt-[25px]">
-
+<a wire:navigate href="{{ route('page.home') }}" class="group relative inline-block cursor-pointer overflow-hidden" @click="mobileMenuOpen = false">
+                        <span class="relative z-10 text-[20px] ">Главная</span>
+                        <div class="
+        absolute bottom-0 left-0 h-0.25 w-full bg-black
+        transform -translate-x-full
+        transition-transform duration-500 ease-in-out
+        group-hover:translate-x-0 group-active:translate-x-0
+    "></div>
+                    </a>
+                    <a wire:navigate href="{{ route('page.products') }}" class="group relative inline-block cursor-pointer overflow-hidden" @click="mobileMenuOpen = false">
+                        <span class="relative z-10 text-[20px] ">Каталог</span>
+                        <div class="
+        absolute bottom-0 left-0 h-0.25 w-full bg-black
+        transform -translate-x-full
+        transition-transform duration-500 ease-in-out
+        group-hover:translate-x-0 group-active:translate-x-0
+    "></div>
+                    </a>
                     <a wire:navigate href="{{ route('page.about') }}" class="group relative inline-block cursor-pointer overflow-hidden" @click="mobileMenuOpen = false">
                         <span class="relative z-10 text-[20px] ">О нас</span>
                         <div class="
