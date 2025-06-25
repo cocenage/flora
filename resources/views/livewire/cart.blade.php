@@ -79,12 +79,16 @@
                 placeholder="Ваше имя"
                 class="w-full px-4 py-2 border border-gray-300 rounded-md ">
 
-            <input wire:model="phone"
-               type="tel"
-                placeholder="Телефон"
-                wire:model.defer="phone"
-                            id="phone"
-                class="w-full px-4 py-2 border border-gray-300 rounded-md ">
+   <div x-data="{ phoneMask: null }" x-init="phoneMask = IMask(document.getElementById('phone'), {
+    mask: '+{7} (000) 000-00-00'
+})">
+    <input wire:model="phone"
+           type="tel"
+           placeholder="Телефон"
+           wire:model.defer="phone"
+           id="phone"
+           class="w-full px-4 py-2 border border-gray-300 rounded-md">
+</div>
 
 
 

@@ -115,7 +115,7 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('title')
+                TextColumn::make('name')
                     ->label('Название услуги')
                     ->sortable()
                     ->searchable(),

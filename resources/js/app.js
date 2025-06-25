@@ -201,3 +201,43 @@ document.addEventListener('DOMContentLoaded', initMap);
 
 // Обновление при навигации
 document.addEventListener("livewire:navigated", initMap);
+
+
+
+document.addEventListener('livewire:initialized', () => {
+    Livewire.on('notify', (data) => {
+        const iconColors = {
+            success: '#4ade80',
+            error: '#f87171',
+            info: '#60a5fa',
+            warning: '#fbbf24'
+        };
+
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: data.type || 'success',
+            title: data.message,
+            showConfirmButton: false,
+            timer: 3500,
+            timerProgressBar: true,
+            background: 'white',
+            color: '#1f2937',
+            padding: '1rem',
+            width: '400px',
+            customClass: {
+                popup: 'border border-gray-200',
+                icon: '!border-none',
+                title: 'text-lg font-semibold'
+            },
+            iconColor: iconColors[data.type] || iconColors.success,
+            showClass: {
+                popup: 'animate__animated animate__fadeInRight animate__faster'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutRight animate__faster'
+            }
+        });
+    });
+});
+

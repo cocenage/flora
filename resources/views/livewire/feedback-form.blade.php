@@ -17,47 +17,47 @@
         <!-- Скрытое honeypot-поле -->
         <input type="text" name="website" wire:model="honeypot" style="display: none;">
 
-<div class="w-full mb-4">
-    <input
-        wire:model="phone"
-        type="tel"
-        placeholder="Номер телефона"
-        class="w-full px-6 py-4 border-2 rounded-full focus:outline-none"
-         wire:model.defer="phone"
-                            id="phone"
-    >
-    @error('phone') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
-</div>
-
-        <!-- Остальные поля формы -->
         <div class="w-full mb-4">
             <input
-                wire:model="email"
-                type="email"
-                placeholder="Почта"
-                class="w-full px-6 py-4 border-2 rounded-full focus:outline-none  "
+                wire:model.defer="phone"
+                type="tel"
+                placeholder="Номер телефона"
+                class="w-full px-6 py-4 border-2 rounded-full focus:outline-none text-white"
+                id="phone"
             >
-            @error('email') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+            @error('phone')
+                <span class="text-red-500 text-sm mt-1 block">{{ $message }}</span>
+            @enderror
         </div>
 
-        <div class="w-full ">
+        <div class="w-full mb-4">
+            <input
+                wire:model.defer="email"
+                type="email"
+                placeholder="Email"
+                class="w-full px-6 py-4 border-2 rounded-full focus:outline-none text-white"
+            >
+            @error('email')
+                <span class="text-red-500 text-sm mt-1 block">{{ $message }}</span>
+            @enderror
+        </div>
+
+        <div class="w-full mb-4">
             <textarea
-                wire:model="message"
+                wire:model.defer="message"
                 placeholder="Ваше сообщение"
                 rows="4"
-                class="w-full px-6 py-4 border-2 text-white rounded-[30px] focus:outline-none  "
+                class="w-full px-6 py-4 border-2 text-white rounded-[30px] focus:outline-none"
             ></textarea>
-            @error('message') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+            @error('message')
+                <span class="text-red-500 text-sm mt-1 block">{{ $message }}</span>
+            @enderror
         </div>
 
-
-                <button   type="submit"
-    class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#fff] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
+        <button type="submit"
+            class="mt-[32px] btn btn--primary relative inline-flex rounded-full items-center justify-center overflow-hidden px-[40px] py-[12.5px] bg-[#fff] text-black font-medium transition-all duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group">
             <span class="text-[14px] relative z-10 transition-colors duration-200 group-hover:text-[#fff]">Отправить</span>
-
-            <!-- Анимированный фон -->
             <span class="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-[cubic-bezier(.77,.14,.11,.88)] group-hover:blur-[1px]"></span>
         </button>
-
     </form>
 </div>
